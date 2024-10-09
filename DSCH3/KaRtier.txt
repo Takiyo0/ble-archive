@@ -1,0 +1,22 @@
+J6992#Rolex Necklace#the best necklace made by rolex#Necklace#1000#49
+J3485#Tiffany Bracelet#elegant bracelet crafted by Tiffany#Bracelet#850#35
+J9843#Cartier Ring#luxurious ring made by Cartier#Ring#1200#20
+J1234#Pandora Necklace#customizable necklace by Pandora#Necklace#500#100
+J5678#Bvlgari Ring#stylish ring made by Bvlgari#Ring#2000#15
+J4321#Chanel Bracelet#classic bracelet by Chanel#Bracelet#750#60
+J5670#Gucci Necklace#fashionable necklace by Gucci#Necklace#400#40
+J6789#Hermes Ring#luxurious ring by Hermes#Ring#950#30
+J9876#Michael Kors Bracelet#stylish bracelet by Michael Kors#Bracelet#300#50
+J1235#Fendi Ring#high-end ring crafted by Fendi#Ring#1500#10
+J5555#Seiko Necklace#reliable necklace made by Seiko#Necklace#350#70
+J8888#Burberry Bracelet#trendy bracelet by Burberry#Bracelet#600#25
+J2222#Bulgari Ring#elegant ring made by Bulgari#Ring#450#45
+J7777#Dior Necklace#fashion necklace by Dior#Necklace#850#20
+J3333#Versace Bracelet#bold bracelet crafted by Versace#Bracelet#1100#12
+J4444#Coach Ring#practical ring made by Coach#Ring#250#80
+J6666#Jimmy Choo Necklace#luxurious necklace by Jimmy Choo#Necklace#2000#22
+J1111#Zara Bracelet#affordable stylish bracelet by Zara#Bracelet#100#55
+J9999#Miu Miu Ring#chic ring by Miu Miu#Ring#700#18
+J0001#Loewe Necklace#designer necklace by Loewe#Necklace#1300#30
+J1236#Hugo Boss Bracelet#classic bracelet made by Hugo Boss#Bracelet#150#65
+J6077#Rolex Thingy#The most expensive things#Ring#500#20
