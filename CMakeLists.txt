@@ -28,6 +28,13 @@ add_executable(algopro_quadratic
         DSCH1/problem5.c
         DSCH2/problem1.c
         DSCH3/problem1.c
+        fifthweek/a.c
+        fifthweek/b.c
+        fifthweek/c.c
+        fifthweek/d.c
+        fifthweek/e.c
+        fifthweek/f.c
+        DSCH4/problem1.c
         #        main.c
 #        socs1-a.c
 #        socs1-b.c
