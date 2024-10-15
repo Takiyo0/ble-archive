@@ -7,41 +7,50 @@ import us.takiyo.interfaces.Item;
 import java.util.*;
 
 public class ItemManager {
-    public Map<String, Category> items = new HashMap<>();
+    public Vector<Category> items = new Vector<>();
 
     public ItemManager() {
     }
 
     public Category GetCategory(String id) {
-        return this.items.get(id);
+        for (Category category : this.items) {
+            if (Objects.equals(category.Id, id)) {
+                return category;
+            }
+        }
+        return null;
     }
 
     public void AddItem(String category, String itemName) {
         Item newItem = new Item("PR" + Utils.generateNumber(101, 999), itemName);
-        Category cate = this.items.get(category) == null ? new Category() : this.items.get(category);
+        Category cate = this.GetCategory(category) == null ? new Category() : this.GetCategory(category);
         cate.Items.add(newItem);
-        this.items.put(category, cate);
+        this.items.add(cate);
+    }
+
+    public void AddCategory(Category category) {
+        this.items.add(category);
     }
 
     public void DeleteCategory(String category) {
-        this.items.remove(category);
+        Category cate = this.GetCategory(category);
+        if (cate != null) this.items.remove(cate);
     }
 
     public int GetItemCount(String category) {
-        return this.items.get(category) == null ? 0 : this.items.get(category).Items.size();
+        return this.GetCategory(category) == null ? 0 : this.GetCategory(category).Items.size();
     }
 
-    public int RemoveItem(String category, String itemId) {
-        Category cate = this.items.get(category);
+    public void RemoveItem(String category, String itemId) {
+        Category cate = this.GetCategory(category);
         if (cate == null) {
-            return 0;
+            return;
         }
         Item targetItem = this.GetItem(cate.Items, itemId);
         if (targetItem == null) {
-            return 0;
+            return;
         }
         cate.Items.remove(targetItem);
-        return 1;
     }
 
     public Item GetItem(List<Item> items, String id) {
