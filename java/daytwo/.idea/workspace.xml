@@ -4,21 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75fbd8a4-4358-4dba-ac4d-e0248af006f8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/us/takiyo/interfaces/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/us/takiyo/managers/FileManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/us/takiyo/managers/UserManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/us/takiyo/utils/UserComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/us/takiyo/utils/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day1/untitled/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dayone/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dayone/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="75fbd8a4-4358-4dba-ac4d-e0248af006f8" name="Changes" comment="sync else">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/us/takiyo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/us/takiyo/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/us/takiyo/managers/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/us/takiyo/managers/FileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -54,8 +53,8 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "settings.sync",
     "vue.rearranger.settings.migration": "true"
   }
@@ -96,11 +95,33 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1729045644020</updated>
-      <workItem from="1729045645330" duration="11315000" />
+      <workItem from="1729045645330" duration="16065000" />
     </task>
+    <task id="LOCAL-00001" summary="add day 2 java">
+      <option name="closed" value="true" />
+      <created>1729062954444</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1729062954444</updated>
+    </task>
+    <task id="LOCAL-00002" summary="sync else">
+      <option name="closed" value="true" />
+      <created>1729062962825</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1729062962825</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add day 2 java" />
+    <MESSAGE value="sync else" />
+    <option name="LAST_COMMIT_MESSAGE" value="sync else" />
   </component>
 </project>

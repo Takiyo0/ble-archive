@@ -31,7 +31,7 @@ public class Main {
 
     private void waitForEnter() {
         try {
-            System.out.println("Press ENTER to continue...");
+            System.out.print("Press ENTER to continue...");
             int a = System.in.read();
         } catch (Exception ignored) {
         }
@@ -185,12 +185,12 @@ public class Main {
 //            {1,0,0,0,0}
 //            {1,0,1,0,1}
 //        }
-        int random = ThreadLocalRandom.current().nextInt(0, 2); // 0-1
+        int random = ThreadLocalRandom.current().nextInt(2); // 0-1
         int[] lampsAffected;
         if (random == 0) lampsAffected = new int[]{2, 2, 1};
         else lampsAffected = new int[]{1, 3, 1};
 
-        while (!isWinnable(lamps, leverSet, true)) {
+        while (!isWinnable(lamps, leverSet)) {
             for (int i = 0; i < leverSet.length; i++)
                 for (int a = 0; a < lamps.length; a++)
                     leverSet[i][a] = 0;
@@ -209,21 +209,21 @@ public class Main {
             }
         }
 
-        int totalMove = 1;
+        int totalMove = 0;
         boolean win = false;
         while (totalMove <= 25) {
             this.clearTerminal();
             switch (state) {
                 case 0: {
                     System.out.printf(
-                            "Lamp status:\n" +
+                            "Lamp status:" +
                                     "\n╔══════════════════════════════════════════════════════╗" +
                                     "\n║  Lamp 1  ║  Lamp 2  ║  Lamp 3  ║  Lamp 4  ║  Lamp 5  ║" +
-                                    "\n║   %s   ║   %s   ║   %s   ║   %s   ║   %s   ║" +
+                                    "\n║   %-4s   ║   %-4s   ║   %-4s   ║   %-4s   ║   %-4s   ║" +
                                     "\n╚══════════════════════════════════════════════════════╝\n",
                             this.G(lamps[0]), this.G(lamps[1]), this.G(lamps[2]), this.G(lamps[3]), this.G(lamps[4]));
                     System.out.println("Your Move: " + totalMove);
-                    System.out.println("Choose a lever to pull (1-5)[0 to give up]\n> ");
+                    System.out.print("Choose a lever to pull (1-5)[0 to give up]\n> ");
                     int choice = this.getInt();
                     if (choice == -1) {
                         sendError("Choice must be a number");
@@ -242,7 +242,7 @@ public class Main {
                     for (int i = 0; i < lampToSwitch.length; i++)
                         if (lampToSwitch[i] == 1)
                             lamps[i] = (lamps[i] == 0) ? 1 : 0;
-                    if (isWinnable(lamps, leverSet, false)) {
+                    if (isWin(lamps)) {
                         win = true;
                         break;
                     }
@@ -251,7 +251,7 @@ public class Main {
                 }
 
                 case 1: {
-                    System.out.println("You sure you want to give up? [Y/N]\n> ");
+                    System.out.print("You sure you want to give up? [Y/N]\n> ");
                     String res = this.scanner.nextLine();
                     if (Objects.equals(res, "Y")) {
                         return;
@@ -309,17 +309,21 @@ public class Main {
 
 
     private String G(int a) {
-        return a == 0 ? "OFF" : "ON";
+        return a == 1 ? "OFF" : "ON";
     }
 
-    private boolean isWinnable(int[] lamps, int[][] leverSet, boolean reset) {
-        if (reset) Arrays.fill(lamps, 0);
+    private boolean isWinnable(int[] lamps, int[][] leverSet) {
+        Arrays.fill(lamps, 0);
 
-        for (int i = 0; i < leverSet.length; i++)
+        for (int[] ints : leverSet)
             for (int j = 0; j < lamps.length; j++)
-                if (leverSet[i][j] == 1)
+                if (ints[j] == 1)
                     lamps[j] = (lamps[j] == 0) ? 1 : 0;
 
+        return isWin(lamps);
+    }
+
+    private boolean isWin(int[] lamps) {
         for (int lamp : lamps)
             if (lamp == 0) return false;
         return true;

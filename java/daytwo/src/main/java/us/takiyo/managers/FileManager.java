@@ -14,26 +14,21 @@ public class FileManager {
         this.create();
     }
 
-    private boolean create() {
+    private void create() {
         try {
             File file = new File(this.filename);
             if (file.createNewFile()) {
-                return true;
             }
-            return false;
         } catch (Exception ignored) {
-            return false;
         }
     }
 
-    public boolean write(String[] data) {
+    public void write(String[] data) {
         try {
             FileWriter file = new FileWriter(this.filename);
             file.write(String.join("\n", data));
             file.close();
-            return true;
         } catch (Exception ignored) {
-            return false;
         }
     }
 
