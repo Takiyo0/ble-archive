@@ -21,9 +21,13 @@ public abstract class ViewExtension {
         this.type = type;
     }
 
+    private View getFirstOfOptions() {
+        return options.isEmpty() ? null : options.get(0);
+    }
+
     public void startHandle() {
         if (this.type == ViewType.Normal) {
-            this.options.getFirst().function.apply(currentState);
+            Objects.requireNonNull(this.getFirstOfOptions()).function.apply(currentState);
             return;
         }
         while (true) {

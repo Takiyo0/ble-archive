@@ -8,6 +8,9 @@ import us.takiyo.interfaces.Money;
 import us.takiyo.interfaces.TradePair;
 import us.takiyo.interfaces.View;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -50,6 +53,7 @@ public class TradeCenter extends ViewExtension {
                 String cyan = "\u001B[36m";
                 String magenta = "\u001B[35m";
                 String bold = "\u001B[1m";
+                String darkGrey = "\u001B[90m";
 
                 System.out.printf(magenta + "╔═══════════════════════════════════════╗\n" + reset);
                 System.out.printf(magenta + "║ %8s" + cyan + bold + "🌟 Trade Center Day %d" + magenta + " %8s║\n", "", this.player.getDay(), "");
@@ -59,6 +63,12 @@ public class TradeCenter extends ViewExtension {
 
                 for (int i = 0; i < pairs.length; i++) {
                     TradePair pair = pairs[i];
+                    if (pair.bought) {
+                        System.out.printf(magenta + "║" + darkGrey + " %-5d " + magenta + "║" + darkGrey + " %-13s " + magenta + "║" + darkGrey + " %-13s " + magenta + "║\n" + reset,
+                                i + 1,
+                                pair.quantity + " " + pair.itemType.toUpperCase(),
+                                "SOLD OUT");
+                    }
                     System.out.printf(magenta + "║" + green + " %-5d " + magenta + "║" + cyan + " %-13s " + magenta + "║" + green + " %-13s " + magenta + "║\n" + reset,
                             i + 1,
                             pair.quantity + " " + pair.itemType.toUpperCase(),
@@ -66,7 +76,14 @@ public class TradeCenter extends ViewExtension {
                 }
 
                 System.out.printf(magenta + "╚═══════╩═══════════════╩═══════════════╝\n" + reset);
-                System.out.printf(magenta + "Choose offer [1-%d; 0 to go back]\n> " + reset, pairs.length);
+                int notAvailableCount = 0;
+                for (int i = 0; i < pairs.length; i++) if (pairs[i].bought) notAvailableCount++;
+
+                int[] available = new int[pairs.length - notAvailableCount];
+                int index = 0;
+                for (int i = 0; i < pairs.length; i++) if (!pairs[i].bought) available[index++] = i + 1;
+
+                System.out.printf(magenta + "Choose offer [%s; 0 to go back]\n> " + reset, this.parseRanges(available));
                 int choice = this.main.getChoice();
                 if (choice < 0 || choice > pairs.length) {
                     this.main.sendError("Invalid input");
@@ -76,6 +93,10 @@ public class TradeCenter extends ViewExtension {
                     break;
                 }
                 TradePair pair = pairs[choice - 1];
+                if (pair.bought) {
+                    this.main.sendError("You already bought this today. Come back again tomorrow!");
+                    continue;
+                }
                 if (!player.isMoneyEnough(new Money[]{new Money(pair.itemType, pair.quantity)})) {
                     this.main.sendError("Oops, you don't have enough money");
                     continue;
@@ -90,5 +111,35 @@ public class TradeCenter extends ViewExtension {
         };
 
         this.options.add(page);
+    }
+
+    private String parseRanges(int[] numbers) {
+        Arrays.sort(numbers);
+
+        List<String> ranges = new ArrayList<>();
+        int start = numbers[0];
+        int end = numbers[0];
+
+        for (int i = 1; i < numbers.length; i++) {
+            if (numbers[i] == end + 1) {
+                end = numbers[i];
+            } else {
+                if (start == end) {
+                    ranges.add(String.valueOf(start));
+                } else {
+                    ranges.add(start + "-" + end);
+                }
+                start = numbers[i];
+                end = numbers[i];
+            }
+        }
+
+        if (start == end) {
+            ranges.add(String.valueOf(start));
+        } else {
+            ranges.add(start + "-" + end);
+        }
+
+        return String.join(",", ranges);
     }
 }

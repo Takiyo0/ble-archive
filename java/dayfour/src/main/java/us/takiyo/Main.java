@@ -19,7 +19,7 @@ public class Main extends Master {
             switch (state) {
                 case 0: {
                     System.out.print("""
-                            -- BLALBAL --
+                            -- HHFactory --
                             1. Play Game
                             2. Exit
                             >\s""");
