@@ -1,0 +1,8 @@
+bacon#20
+bun#18
+cheese#19
+lettuce#20
+onion#20
+patty#19
+pickle#20
+tomato#20

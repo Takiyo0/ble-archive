@@ -1,0 +1,4 @@
+1#charlie#cheese burger#23#14
+2#Hank#cheese burger#13#22
+3#Hank#deluxe burger#31#21
+4#Eve#bacon burger#27#26

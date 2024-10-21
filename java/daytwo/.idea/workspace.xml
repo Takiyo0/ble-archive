@@ -5,9 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75fbd8a4-4358-4dba-ac4d-e0248af006f8" name="Changes" comment="sync else">
+      <change afterPath="$PROJECT_DIR$/../../Curiosity/problem1.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final/src/main/java/us/takiyo/extensions/SocketData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../final/src/main/java/us/takiyo/managers/FileManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sixthweek/a.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sixthweek/b.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sixthweek/c.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sixthweek/d.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sixthweek/e.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../sixthweek/f.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../yeah/problem1.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DSCH5/1" beforeDir="false" afterPath="$PROJECT_DIR$/../../DSCH5/1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DSCH5/dataset.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../DSCH5/dataset.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DSCH5/problem1.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../DSCH5/problem1.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/us/takiyo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/us/takiyo/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/us/takiyo/managers/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/us/takiyo/managers/FileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../yeah/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../yeah/run.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +43,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2nV5wrgG4ndHMMqBokxuyIgJIuX" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -40,25 +54,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.codeium.enabled": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "settings.sync",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.daytwo [jar:jar].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.codeium.enabled&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/takiyo/Documents/projects/uni/uni_challenges/java/daytwo&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn jar:jar" />
+    </option>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="us.takiyo.Main" />
@@ -96,6 +117,12 @@
       <option name="presentableId" value="Default" />
       <updated>1729045644020</updated>
       <workItem from="1729045645330" duration="16065000" />
+      <workItem from="1729084482952" duration="204000" />
+      <workItem from="1729140427734" duration="126000" />
+      <workItem from="1729140615349" duration="2223000" />
+      <workItem from="1729218760736" duration="649000" />
+      <workItem from="1729226993109" duration="5000" />
+      <workItem from="1729493853147" duration="624000" />
     </task>
     <task id="LOCAL-00001" summary="add day 2 java">
       <option name="closed" value="true" />

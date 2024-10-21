@@ -1,0 +1,4 @@
+t612#arya#Male#32
+t666#kristanto#Female#25
+t696#akmal#Male#24
+t432#kevin#Male#12
